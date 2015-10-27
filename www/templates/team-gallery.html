@@ -1,0 +1,19 @@
+<div ng-controller="TeamGalleryController">
+    <!--<ion-view ng-if="currentTeamId == undefined" view-title="Choose a Team">-->
+    <ion-view view-title="Remote Gallery">
+        <ion-content>
+            <p style="margin: 10px;">We are browsing your remote gallery from <b>{{ currentTeamName }}</b> team:</p>
+            <div id="gallerycontainer">
+                <!--onclick="showSweetPhoto(\''+images[i].name+'\',\''+images[i].preview+'\',\'image\')" -->
+                <div ng-click="showSweetPhoto('{{ image.name }}','{{ image.preview }}','{{ image.type }}', '{{ image.path }}');" ng-repeat="image in remoteImages" id="gallery-item{{ image.id }}" class="team-div remote-div">
+                    <div class="remote-item-div">
+                        <img height="64px" ng-src="{{ image.thumb }}"/>
+                    </div>
+                    <img ng-if="image.type != 101" width="24" height="24" src="img/play.svg"/>
+                    <label>{{ image.name }}</label>
+                </div>
+            </div>
+        <ion-infinite-scroll ng-if="hasMoreData==true||currentPage==0" id="infinite-scroll" on-infinite="loadMore()" distance="5%"></ion-infinite-scroll>
+        </ion-content>
+    </ion-view>
+</div>

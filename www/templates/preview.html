@@ -1,0 +1,20 @@
+<div data-ng-controller="UploadController">
+    <!--<ion-view ng-if="currentTeamId == undefined" view-title="Choose a Team">-->
+    <ion-view view-title="One last step...">
+        <ion-content>
+            <p style="margin: 10px;">May be add a description before uploading...</p>
+            <div id="preview-media" style="text-align: center;">
+                <img ng-if="action=='photo'" id="preview-image" ng-src="{{ currentPhoto }}"/>
+                <video ng-if="action=='video'" width="320" height="240" controls>
+                    <source ng-src="{{ trustSrc(currentPhoto) }}" type="video/mp4">
+                </video>
+            </div>
+            <div id="yourstory" class="form-group" >
+                <textarea style="margin-top: 5px;" id="media-description" rows="4" cols="50" class="form-control upcomming-element" placeholder="Any description?"></textarea>
+                <button ng-if="action=='photo'" class="button button-block button-positive" ng-click="uploadFile('photo');">Upload</button>
+                <button ng-if="action=='video'" class="button button-block button-positive" ng-click="uploadFile('video');">Upload</button>
+
+            </div>
+        </ion-content>
+    </ion-view>
+</div>

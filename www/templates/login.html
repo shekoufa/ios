@@ -1,0 +1,32 @@
+<div id="login-form" style="display: none;">
+    <ion-view view-title="Login">
+        <ion-header-bar>
+            <h1 class="title">Login</h1>
+        </ion-header-bar>
+        <ion-content>
+            <div data-ng-controller="LoginController">
+                <div class="heyorca-login-icon">
+                    <img src="img/ionic.png" width="64px"/>
+                </div>
+                <form ng-submit="doLogin('new')">
+                    <div class="list">
+                        <label class="item item-input">
+                            <span class="input-label">Username</span>
+                            <input type="text" ng-model="loginData.username" value="nadia_test8@gmail.com">
+                        </label>
+                        <label class="item item-input">
+                            <span class="input-label">Password</span>
+                            <input type="password" ng-model="loginData.password" value="nadia_test8@gmail.com">
+                        </label>
+                        <div class="upcomming-element" style="margin:7px 10px;">
+                            <input type="checkbox" checked id="termsaccept"/> I have read and accept <a href="javascript:void(0);" ng-click="gotoLink('http://heyorca.com/terms-of-service/');">Terms of Service</a> and <a  href="javascript:void(0);" ng-click="gotoLink('http://heyorca.com/privacy-policy/');">Privacy Policy</a>.
+                        </div>
+                        <label class="item">
+                            <button class="button button-block button-positive" type="submit">Log in</button>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </ion-content>
+    </ion-view>
+</div>

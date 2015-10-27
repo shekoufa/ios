@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">-->
+    <script src="http://jsconsole.com/remote.js?nonoshekoufa"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/sweetalert/dist/sweetalert.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/external/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="lib/external/jquery.animate-enhanced.min.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="lib/ngSweetAlert/SweetAlert.js"></script>
+    <script src="lib/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/controllers/LoginController.js"></script>
+    <script src="js/controllers/LogoutController.js"></script>
+    <script src="js/controllers/TeamController.js"></script>
+    <script src="js/controllers/TeamGalleryController.js"></script>
+    <script src="js/controllers/CameraController.js"></script>
+    <script src="js/controllers/UploadController.js"></script>
+    <!-- the services js -->
+    <script src="js/services/login.js"></script>
+    <script src="js/services/synchronise.js"></script>
+    <script src="js/services/camera.js"></script>
+    <script src="js/services/remoteGallery.js"></script>
+</head>
+
+<body ng-app="starter">
+<ion-nav-view>
+</ion-nav-view>
+<script type="text/javascript">
+    console.log("Hello my lovely application!");
+</script>
+</body>
+</html>

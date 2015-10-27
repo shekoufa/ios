@@ -1,0 +1,18 @@
+<div data-ng-controller="TeamController">
+    <!--<ion-view ng-if="currentTeamId == undefined" view-title="Choose a Team">-->
+    <ion-view view-title="Teams">
+        <ion-content>
+            <p style="margin: 10px;">Select one of your teams to start uploading media:</p>
+            <div id="teams-container">
+                <div ng-repeat="team in teams" ng-click="setTeamId('{{ team.id }}','{{ team.title }}');" id="team-div{{ team.id }}"
+                     ng-class="currentTeamId == team.id ? 'team-div current-team' : 'team-div'">
+                    <div class="team-image-container">
+                        <img ng-if="team.image_url ==''" width="64" src="img/team.png"/>
+                        <img ng-if="team.image_url !=''" width="64" ng-src="{{team.image_url}}"/>
+                    </div>
+                    <label style="min-width: 65%;">{{ team.title }} </label>
+                </div>
+            </div>
+        </ion-content>
+    </ion-view>
+</div>

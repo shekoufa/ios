@@ -1,0 +1,147 @@
+/* Empty. Add your own CSS if you like */
+@media screen and (orientation: portrait) {
+    .poppedup-media {
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .ionic-popup > .popup {
+        width: 98% !important;
+    }
+    .heyorca-login-icon {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .poppedup-media {
+        max-width: 100%;
+    }
+
+    .ionic-popup > .popup {
+        width: 95% !important;
+    }
+    .heyorca-login-icon {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.menu-title {
+    float: left;
+    margin: 0 auto 0 5px !important;
+    line-height: 25px !important;
+}
+
+#profile-thumb {
+    float: left;
+}
+
+#teams-container {
+    text-align: center;
+}
+
+.current-team {
+    background-color: #e0ffff !important;
+}
+
+.team-div {
+    border: 2px solid darkgray;
+    border-radius: 25px;
+    display: inline-block;
+    margin: 5px 5px 5px auto;
+    max-height: 125px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    width: 40%;
+}
+
+.remote-div {
+    border: 2px solid darkgray;
+    display: inline-block;
+    overflow: hidden;
+    padding: 10px;
+    margin: 5px auto;
+    width: 40%;
+    margin-right: 5px;
+    min-height: 120px;
+    border-radius: 25px;
+}
+
+.remote-item-div {
+    /*border-radius: 50px;*/
+    /*width: 64px;*/
+    /*height: 64px;*/
+    /*max-height: 64px;*/
+    overflow: hidden;
+    /*margin-bottom: 15px;*/
+}
+
+.remote-item-div > img {
+    /*margin-right: 10px;*/
+    /*border-radius: 50%;*/
+}
+
+.remote-div > label {
+    margin-left: 5px;
+    min-width: 65%;
+}
+
+#gallerycontainer {
+    text-align: center;
+}
+
+.team-image-container {
+    border-radius: 64px;
+    height: 64px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    width: 64px
+}
+
+.team-image-container > img {
+    margin-right: 10px;
+}
+
+#function-container {
+    text-align: center;
+}
+
+#function-container > div {
+    padding: 5px;
+}
+
+#preview-media {
+    margin: 0 auto;
+    width: 95%;
+    /*border: 1px solid darkgray;*/
+    border-radius: 5px;
+    padding: 5px;
+    max-height: 301px;
+}
+
+#preview-media > img {
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 300px;
+}
+
+#preview-media > video {
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+#yourstory {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}

@@ -1,0 +1,45 @@
+<div>
+    <ion-side-menus enable-menu-with-back-views="true">
+        <ion-side-menu-content>
+            <ion-nav-bar class="bar-stable">
+                <ion-nav-back-button>
+                </ion-nav-back-button>
+
+                <ion-nav-buttons side="left">
+                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                    </button>
+                </ion-nav-buttons>
+            </ion-nav-bar>
+            <ion-nav-view name="menuContent"></ion-nav-view>
+        </ion-side-menu-content>
+
+        <ion-side-menu side="left">
+            <ion-header-bar class="bar-stable">
+                <div>
+                    <div id="profile-thumb">
+                        <img ng-src="{{ userThumbnail }}" height="32"/>
+                    </div>
+                    <div class="menu-title">
+                        {{ userName }}
+                    </div>
+                </div>
+            </ion-header-bar>
+            <ion-content>
+                <ion-list>
+                    <ion-item ng-if="loggedIn == 'false'" ng-controller="LogoutController" ng-click="showLogin();" menu-close>
+                        Login
+                    </ion-item>
+                    <ion-item ng-if="loggedIn == 'true'" menu-close href="#/app/teams">
+                        Teams
+                    </ion-item>
+                    <ion-item ng-if="currentTeamId != undefined" menu-close ng-controller="TeamGalleryController" ng-click="gotoTeamLibrary();">
+                        Team's Gallery
+                    </ion-item>
+                    <ion-item ng-if="loggedIn == 'true'" ng-controller="LogoutController" ng-click="doLogout();" menu-close>
+                        Logout
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+</div>

@@ -1,0 +1,22 @@
+<div data-ng-controller="CameraController">
+    <!--<ion-view ng-if="currentTeamId == undefined" view-title="Choose a Team">-->
+    <ion-view view-title="Choose Media">
+        <ion-content>
+            <p style="margin: 10px;">Choose between the following to capture and upload media to your HeyOrca! library, right away:</p>
+            <div id="function-container">
+                <div>
+                    <input type="image" src="img/photo.png" ng-click="takePhoto();" name="image" title="Take a Photo!" width="120">
+                </div>
+                <div>
+                    <input type="image" src="img/video.png" ng-click="recordVideo();" name="image" title="Capture a Video!" width="120">
+                </div>
+                <div>
+                    <input type="image" src="img/gallery.png" ng-click="getGallery();" name="image" title="Browse Gallery!" width="120">
+                </div>
+            </div>
+            <img id="preview-image" width="300px"/>
+
+
+        </ion-content>
+    </ion-view>
+</div>
